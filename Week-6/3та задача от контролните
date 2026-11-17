@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+int broiDeliteli(int n)
+{
+    int delitelCounter = 0;
+
+    for (int k = 2; k < n; k++)
+    {
+        if (n % k == 0)
+        {
+            delitelCounter++;
+        }
+    }
+
+    return delitelCounter;
+}
+
+int delitelChecker(int deliteli)
+{
+    if (deliteli < 2)
+    {
+        return 0;
+    }
+
+    for (int i = 2; i < deliteli; i++)
+    {
+        if (deliteli % i == 0)
+        {
+            return 0;
+        }
+    }
+
+    return 1;
+}
+
+int main()
+{
+    int a, b;
+
+    scanf("%d %d", &a, &b);
+
+    int result = 0;
+
+    for (int number = a; number <= b; number++)
+    {
+        int deliteli = broiDeliteli(number);
+
+        if (delitelChecker(deliteli))
+        {
+            result++;
+        }
+    }
+
+    printf("%d", result);
+
+    return 0;
+}
