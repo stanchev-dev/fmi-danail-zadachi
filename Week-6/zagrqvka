@@ -1,0 +1,74 @@
+#include <stdio.h>
+
+int absoluteValue(int number)
+{
+    if (number < 0)
+    {
+        return -number;
+    }
+
+    return number;
+}
+
+int main()
+{
+    int number;
+    
+    scanf("%d", &number);
+    
+    number = absoluteValue(number);
+    
+    printf("%d", number);
+    
+    return 0;
+}
+-----------------------------------------------
+//int isDigit(char symbol); //връща дали символът е цифра
+#include <stdio.h>
+
+int isDigit(char symbol)
+{
+    if (symbol >= '0' && symbol <= '9')
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int main()
+{
+    char symbol;
+  
+    scanf("%c", &symbol);
+  
+    printf("%d", isDigit(symbol));
+}
+-------------------------------------------------
+//char toUpper(char symbol); // ако буквата е малка връща съответната и главна
+#include <stdio.h>
+
+char toUpper(char symbol)
+{
+    if (symbol >= 'a' && symbol <= 'z')
+    {
+        return symbol-32;
+    }
+    else
+    {
+        return symbol;
+    }
+}
+
+int main()
+{
+    char symbol;
+  
+    scanf("%c", &symbol);
+  
+    printf("%c", toUpper(symbol));
+}
+---------------------------------------------------------
+
